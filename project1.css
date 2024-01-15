@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Salsa', cursive;
+    font-family: 'Salsa', cursive, sans-serif;
 }
 
 body {
@@ -44,6 +44,9 @@ header nav ul li a {
     color: #000;
     padding: 0 15px; /* Reduce padding for better responsiveness */
 }
+header nav ul li a:hover {
+    padding: 0 15px;
+}
 
 /* About Me Section Styles */
 #about {
@@ -68,11 +71,11 @@ header nav ul li a {
     width: 100%;
     max-width: 400px; /* Set max-width for better responsiveness */
     border-radius: 15px;
-    transition: all 0.5s;
+    transition: all 0.8s;
 }
 
 #about article img:hover {
-    box-shadow: 0px 0px 10px 5px #000000d4;
+    box-shadow: 0px 0px 10px 5px blue;
 }
 
 /* Skills Section Styles */
@@ -110,6 +113,23 @@ header nav ul li a {
 #tech-skills ul li {
     font-size: 15px;
 }
+.card {
+    width: 30%;
+    height: 10vh;
+    border: 1px solid rgba(0, 128, 0, 0.245);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    transition: all 0.5s;
+}
+
+.card:hover {
+    box-shadow: inset 2px 0px 10px 2px green;
+    transform: scale(0.95);
+    cursor: pointer;
+}
 
 /* Project Section Styles */
 #projects {
@@ -127,7 +147,6 @@ header nav ul li a {
 
 #project-container {
     display: flex;
-    flex-wrap: wrap; /* Allow projects to wrap to the next line on smaller screens */
     justify-content: space-evenly;
     align-items: center;
     gap: 2rem;
@@ -146,16 +165,19 @@ header nav ul li a {
     padding: 10px; /* Add padding for better spacing */
     text-align: center;
     transition: all 0.3s;
+    height: 40vh;
 }
 
 .project-card button {
     border: none;
     border-radius: 15px;
     height: 40px; /* Adjust button height for better spacing */
-    width: 80%; /* Make button width responsive */
+    width: 120%; /* Make button width responsive */
     background-color: #4caf50;
     color: yellow;
     cursor: pointer;
+    padding: 10px 20px;
+
 }
 
 .project-card:hover {
@@ -183,19 +205,27 @@ footer {
     border: none;
     background-color: aqua;
     transition: all 0.6s;
+    display: none;
 }
 
 #back-to-top-btn.show {
     transform: scale(1);
+    display: block;
 }
 
 #back-to-top-btn:hover {
     background-color: #0056b3;
     color: white;
 }
+#back-to-top-btn span {
+    margin-right: 5px;
+}
 
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 768px) {
+    * {
+        text-align: center;
+    }
     #about article img {
         max-width: 100%; /* Adjust image max-width for smaller screens */
     }
@@ -215,5 +245,44 @@ footer {
     #back-to-top-btn {
         bottom: 10px; /* Adjust Back to Top button position for smaller screens */
         right: 10px;
+    }
+    #project-container {
+        flex-wrap: wrap; /*Allow projects to wrap to the next line on smaller screens*/
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Additional styles for even smaller screens */
+
+    header h1 {
+        font-size: 25px; /* Further reduce header font-size for even smaller screens */
+    }
+
+    header nav ul li a {
+        padding: 0 5px; /* Further reduce navigation link padding for even smaller screens */
+    }
+
+    #back-to-top-btn {
+        bottom: 5px; /* Further adjust Back to Top button position for even smaller screens */
+        right: 5px;
+    }
+}
+
+@media screen and (max-width: 318px) {
+    /* Additional styles for screens narrower than 318px */
+    *{
+        font-size: 15px;
+    }
+    header h1 {
+        font-size: 15px; /* Further reduce header font-size for screens narrower than 318px */
+    }
+
+    header nav ul li a {
+        padding: 0 3px; /* Further reduce navigation link padding for screens narrower than 318px */
+    }
+
+    #back-to-top-btn {
+        bottom: 3px; /* Further adjust Back to Top button position for screens narrower than 318px */
+        right: 3px;
     }
 }
