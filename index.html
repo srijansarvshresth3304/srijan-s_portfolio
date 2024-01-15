@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -25,9 +25,10 @@
     <main>
         <section id="about">
             <article>
-                <h2>About Me</h2>
-                <img src="https://media.giphy.com/media/Nqi5KJIEGStWg/giphy.gif" alt="Me at the beach">
-                <p>My name is Srijan Sarvshresth and I am from Patna.</p>
+                <figure>
+                    <img src="https://media.giphy.com/media/Nqi5KJIEGStWg/giphy.gif" alt="Me at the beach">
+                    <figcaption>My name is Srijan Sarvshresth and I am from Patna.</figcaption>
+                </figure>
             </article>
         </section>
         <section id="skills">
@@ -50,33 +51,35 @@
                     <p>
                         A simple weather application built using React library.
                     </p>
-                    <a href="#"><button class="learn-more">Learn more</button></a>
+                    <a href="#"><button class="learn-more"><span>Learn more</span></button></a>
                 </div>
                 <div class="project-card">
                     <h2>Portfolio Website (HTML/CSS)</h2>
                     <p>
                         Designed and developed my personal portfolio website using HTML and CSS.
                     </p>
-                    <a href="#"><button class="learn-more">Learn more</button></a>
+                    <a href="#"><button class="learn-more"><span>Learn more</span></button></a>
                 </div>
                 <div class="project-card">
                     <h2>Chat Application (Python)</h2>
                     <p>
                         Implemented a chat application using Python with socket programming.
                     </p>
-                    <a href="#"><button class="learn-more">Learn more</button></a>
+                    <a href="#"><button class="learn-more"><span>Learn more</span></button></a>
                 </div>
                 <div class="project-card">
                     <h2>E-commerce Website (React)</h2>
                     <p>
                         Developed an e-commerce website using React, Redux, and Firebase.
                     </p>
-                    <a href="#"><button class="learn-more">Learn more</button></a>
+                    <a href="#"><button class="learn-more"><span>Learn more</span></button></a>
                 </div>
             </div>
         </section>
-        <button id="back-to-top-btn" onclick="topFunction()">Back to Top</button>
-    </main>
+        <button id="back-to-top-btn" onclick="topFunction()">
+            <span>&uarr;</span> Back to Top
+        </button>
+
     <footer>
         <p>
             © 2024, Srijan's Profitolio. All rights reserved.
